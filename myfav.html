@@ -4,6 +4,87 @@
 <head>
     <title>index orelsite</title>
     <meta charset="utf-8" />
+    <style>
+        .player-container {
+            background: #222;
+            border-radius: 20px;
+            box-shadow: 0 0 20px 5px rgba(78, 14, 226, 0.15);
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 30px 30px 20px 30px;
+            text-align: center;
+        }
+
+        .player-title {
+            color: #e63946;
+            font-size: 2em;
+            margin-bottom: 20px;
+            font-family: Arial, sans-serif;
+            text-decoration: underline;
+        }
+
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            outline: none;
+            border-radius: 10px;
+            background: #444;
+        }
+
+        .track-list {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .track-list label {
+            display: block;
+            color: #fff;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            cursor: pointer;
+            padding: 8px 12px;
+            border-radius: 10px;
+            transition: background 0.2s;
+        }
+
+        .track-list label:hover {
+            background: #444;
+        }
+
+        .track-list input[type="radio"] {
+            display: none;
+        }
+
+        .track-list label.selected {
+            background: #e63946;
+            color: #fff;
+        }
+    </style>
+    <script>
+        // Simple JS pour changer la piste audio
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. Récupère l'élément audio du lecteur
+            const audio = document.getElementById('audio-player');
+            // 2. Récupère tous les boutons radio pour les pistes
+            const radios = document.querySelectorAll('.track-radio');
+            // 3. Récupère tous les labels des pistes
+            const labels = document.querySelectorAll('.track-list label');
+            // 4. Pour chaque bouton radio (chaque piste)
+            radios.forEach((radio, idx) => {
+                // 5. Ajoute un écouteur d'événement sur le changement de sélection
+                radio.addEventListener('change', function () {
+                    // 6. Change la source de l'audio selon la valeur du bouton radio sélectionné
+                    audio.src = this.value;
+                    // 7. Joue la nouvelle piste automatiquement
+                    audio.play();
+                    // 8. Retire la classe 'selected' de tous les labels (pour l'effet visuel)
+                    labels.forEach(l => l.classList.remove('selected'));
+                    // 9. Ajoute la classe 'selected' au label du bouton radio sélectionné
+                    labels[idx].classList.add('selected');
+                });
+            });
+        });
+    </script>
 </head>
 
 <body style="background:#333;color:white;">
@@ -35,7 +116,32 @@
                 ContactUs
             </a>
         </nav>
+    </div>
 
+    <div class="player-container">
+        <div class="player-title">MON TOP</div>
+        <audio id="audio-player" controls>
+            <source src="asset/song1.mp3" type="audio/mp3">
+            Votre navigateur ne supporte pas l'audio HTML5.
+        </audio>
+        <div class="track-list">
+            <label class="selected">
+                <input class="track-radio" type="radio" name="track" value="asset/song1.mp3" checked>
+                Top 1 suicide social
+            </label>
+            <label>
+                <input class="track-radio" type="radio" name="track" value="asset/song2.mp3">
+                Top 2 changement
+            </label>
+            <label>
+                <input class="track-radio" type="radio" name="track" value="asset/song3.mp3">
+                Top 3 gross poisson dans une petite mare
+            </label>
+            <label>
+                <input class="track-radio" type="radio" name="track" value="asset/song3.mp3">
+                Top 4 Saint-Valentin
+            </label>
+        </div>
     </div>
 </body>
 
