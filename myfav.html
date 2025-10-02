@@ -7,79 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
 
-    <style>
-        .player-container {
-            background: #222;
-            border-radius: 20px;
-            box-shadow: 0 0 20px 5px rgba(78, 14, 226, 0.15);
-            max-width: 500px;
-            margin: 40px auto;
-            padding: 30px 30px 20px 30px;
-            text-align: center;
-        }
 
-        .player-title {
-            color: #e63946;
-            font-size: 2em;
-            margin-bottom: 20px;
-            font-family: Arial, sans-serif;
-            text-decoration: underline;
-        }
-
-        audio {
-            width: 100%;
-            margin-top: 20px;
-            outline: none;
-            border-radius: 10px;
-            background: #444;
-        }
-
-        .track-list {
-            margin-top: 20px;
-            text-align: left;
-        }
-
-        .track-list label {
-            display: block;
-            color: #fff;
-            font-size: 1.1em;
-            margin-bottom: 10px;
-            cursor: pointer;
-            padding: 8px 12px;
-            border-radius: 10px;
-            transition: background 0.2s;
-        }
-
-        .track-list label:hover {
-            background: #444;
-        }
-
-        .track-list input[type="radio"] {
-            display: none;
-        }
-
-        .track-list label.selected {
-            background: #e63946;
-            color: #fff;
-        }
-
-        @media (max-width: 700px) {
-            h1 {
-                font-size: 12vw !important;
-            }
-
-            nav {
-                flex-direction: column !important;
-                padding: 20px !important;
-            }
-
-            .player-container {
-                max-width: 98vw;
-                padding: 20px 5vw;
-                margin: 20px auto;
-            }
-        }
-    </style>
     <script>
         // Simple JS pour changer la piste audio
         document.addEventListener('DOMContentLoaded', function () {
