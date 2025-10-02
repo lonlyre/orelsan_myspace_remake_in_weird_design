@@ -4,6 +4,8 @@
 <head>
     <title>index orelsite</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <style>
         .form-container {
             background: #222;
@@ -65,35 +67,47 @@
         .form-button:hover {
             background: #b5172f;
         }
+
+        /* Responsive styles */
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 12vw !important;
+            }
+
+            nav {
+                flex-direction: column !important;
+                padding: 20px !important;
+            }
+
+            .form-container {
+                max-width: 98vw;
+                padding: 20px 5vw;
+                margin: 20px auto;
+            }
+        }
     </style>
 </head>
 
 <body style="background:#333;color:white;">
-    <center>
-        <div style="display: flex; justify-content: center; align-items: center; height: 100px;background:#333;">
-            <h1
-                style="font-size: 100px; margin: 20; color:#e63946; font-family:Arial, sans-serif; text-decoration: underline;">
-                <strong>ContactUs</strong>
-            </h1>
-        </div>
-    </center>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100px;background:#333;">
+        <h1
+            style="font-size: 100px; margin: 20px 0; color:#e63946; font-family:Arial, sans-serif; text-decoration: underline;">
+            <strong>ContactUs</strong>
+        </h1>
+    </div>
 
     <div>
         <nav style="display:flex; background:#333; padding:50px;">
-            <a href="main.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="main.html" class="barnav">
                 Accueil
             </a>
-            <a href="biblio.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="biblio.html" class="barnav">
                 Bibliographie
             </a>
-            <a href="myfav.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="myfav.html" class="barnav">
                 MyFav
             </a>
-            <a href="contactus.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="contactus.html" class="barnav">
                 ContactUs
             </a>
         </nav>

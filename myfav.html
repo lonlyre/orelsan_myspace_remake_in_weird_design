@@ -4,6 +4,9 @@
 <head>
     <title>index orelsite</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+
     <style>
         .player-container {
             background: #222;
@@ -59,27 +62,35 @@
             background: #e63946;
             color: #fff;
         }
+
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 12vw !important;
+            }
+
+            nav {
+                flex-direction: column !important;
+                padding: 20px !important;
+            }
+
+            .player-container {
+                max-width: 98vw;
+                padding: 20px 5vw;
+                margin: 20px auto;
+            }
+        }
     </style>
     <script>
         // Simple JS pour changer la piste audio
         document.addEventListener('DOMContentLoaded', function () {
-            // 1. Récupère l'élément audio du lecteur
             const audio = document.getElementById('audio-player');
-            // 2. Récupère tous les boutons radio pour les pistes
             const radios = document.querySelectorAll('.track-radio');
-            // 3. Récupère tous les labels des pistes
             const labels = document.querySelectorAll('.track-list label');
-            // 4. Pour chaque bouton radio (chaque piste)
             radios.forEach((radio, idx) => {
-                // 5. Ajoute un écouteur d'événement sur le changement de sélection
                 radio.addEventListener('change', function () {
-                    // 6. Change la source de l'audio selon la valeur du bouton radio sélectionné
                     audio.src = this.value;
-                    // 7. Joue la nouvelle piste automatiquement
                     audio.play();
-                    // 8. Retire la classe 'selected' de tous les labels (pour l'effet visuel)
                     labels.forEach(l => l.classList.remove('selected'));
-                    // 9. Ajoute la classe 'selected' au label du bouton radio sélectionné
                     labels[idx].classList.add('selected');
                 });
             });
@@ -88,31 +99,25 @@
 </head>
 
 <body style="background:#333;color:white;">
-    <center>
-        <div style="display: flex; justify-content: center; align-items: center; height: 100px;background:#333;">
-            <h1
-                style="font-size: 100px; margin: 20; color:#e63946; font-family:Arial, sans-serif; text-decoration: underline;">
-                <strong>MyFavSong</strong>
-            </h1>
-        </div>
-    </center>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100px;background:#333;">
+        <h1
+            style="font-size: 100px; margin: 20px 0; color:#e63946; font-family:Arial, sans-serif; text-decoration: underline;">
+            <strong>MyFavSong</strong>
+        </h1>
+    </div>
 
     <div>
         <nav style="display:flex; background:#333; padding:50px;">
-            <a href="main.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="main.html" class="barnav">
                 Accueil
             </a>
-            <a href="biblio.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="biblio.html" class="barnav">
                 Bibliographie
             </a>
-            <a href="myfav.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="myfav.html" class="barnav">
                 MyFav
             </a>
-            <a href="contactus.html"
-                style="flex:1; text-align:center; color:white; text-decoration:none; padding:10px; background:#444; margin:5px; border-radius:55px;">
+            <a href="contactus.html" class="barnav">
                 ContactUs
             </a>
         </nav>
@@ -135,7 +140,7 @@
             </label>
             <label>
                 <input class="track-radio" type="radio" name="track" value="extrait_music/gros_poisson.mp3">
-                Top 3 gross poisson dans une petite mare
+                Top 3 gros poisson dans une petite mare
             </label>
             <label>
                 <input class="track-radio" type="radio" name="track" value="extrait_music/valentin.mp3">

@@ -1,0 +1,10 @@
+ .barnav {
+     flex: 1;
+     text-align: center;
+     color: white;
+     text-decoration: none;
+     padding: 10px;
+     background: #444;
+     margin: 5px;
+     border-radius: 55px;
+ }
