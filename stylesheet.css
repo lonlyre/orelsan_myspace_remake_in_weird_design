@@ -253,3 +253,21 @@ contact
          max-width: 350px !important;
      }
  }
+
+ .titre-orel:hover {
+     background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-fill-color: transparent;
+     transition: background 0s;
+ }
+
+ .h1:hover {
+     background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     background-clip: text;
+     text-fill-color: transparent;
+     transition: background 0s;
+ }
