@@ -102,6 +102,7 @@ main
      color: #e63946;
      font-family: Arial, sans-serif;
      text-decoration: underline;
+     transition: 500ms;
 
  }
 
@@ -260,14 +261,18 @@ contact
      -webkit-text-fill-color: transparent;
      background-clip: text;
      text-fill-color: transparent;
-     transition: background 0s;
+     transition: 500ms
  }
 
- .h1:hover {
+ h1 {
+     transition: 500ms ease-in;
+ }
+
+ h1:hover {
      background: linear-gradient(90deg, #ff0000, #ff9900, #ffff00, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-clip: text;
      text-fill-color: transparent;
-     transition: background 0s;
+     transition: 500ms;
  }
