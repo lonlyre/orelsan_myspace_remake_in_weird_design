@@ -7,6 +7,7 @@
      background: #444;
      margin: 5px;
      border-radius: 55px;
+     transition: 500ms;
  }
 
  .barnav:hover {
@@ -264,7 +265,7 @@ contact
  }
 
  h1 {
-     transition: 500ms ease-in;
+     transition: 1000ms;
  }
 
  h1:hover {
@@ -273,4 +274,12 @@ contact
      -webkit-text-fill-color: transparent;
      background-clip: text;
      transition: 500ms;
+ }
+
+ .img {
+     transition: transform 0.3s ease;
+ }
+
+ .img:hover {
+     transform: scale(1.1);
  }
