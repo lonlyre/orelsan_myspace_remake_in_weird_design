@@ -260,7 +260,6 @@ contact
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-clip: text;
-     text-fill-color: transparent;
      transition: 500ms
  }
 
@@ -273,6 +272,5 @@ contact
      -webkit-background-clip: text;
      -webkit-text-fill-color: transparent;
      background-clip: text;
-     text-fill-color: transparent;
      transition: 500ms;
  }
